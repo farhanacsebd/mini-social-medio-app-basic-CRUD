@@ -27,9 +27,10 @@ let data = {};
 function acceptData(){
     data['text'] = input.value;
     console.log(data);
+    createPosts()
 }
 
 
 function createPosts(){
-    
+    posts.innerText = data.text;
 }
