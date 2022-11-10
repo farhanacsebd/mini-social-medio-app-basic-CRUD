@@ -17,6 +17,7 @@ function formValidation(){
     }
     else{
         console.log('success');
+        msg.innerText = "";
         acceptData()
     }
 }
