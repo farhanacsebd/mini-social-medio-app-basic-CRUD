@@ -37,7 +37,7 @@ function createPosts(){
     <p>${data.text}</p>
     <span class="options">
         <i class="fas fa-edit"></i>
-        <i class="fas fa-trash-alt"></i>
+        <i onclick="deletePosts(this)" class="fas fa-trash-alt"></i>
     </span>
     </div>
     `;
@@ -45,4 +45,9 @@ function createPosts(){
 
     // remove the input field 
     input.value = '';
+}
+
+// need to use E6 function  
+let deletePosts=(e)=>{
+  e.parentElement.parentElement.remove()
 }
