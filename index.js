@@ -41,4 +41,8 @@ function createPosts(){
     </span>
     </div>
     `;
+    
+
+    // remove the input field 
+    input.value = '';
 }
