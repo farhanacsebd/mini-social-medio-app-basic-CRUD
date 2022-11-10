@@ -36,7 +36,7 @@ function createPosts(){
     `<div>
     <p>${data.text}</p>
     <span class="options">
-        <i class="fas fa-edit"></i>
+        <i onclick="editPosts(this)" class="fas fa-edit"></i>
         <i onclick="deletePosts(this)" class="fas fa-trash-alt"></i>
     </span>
     </div>
@@ -47,7 +47,22 @@ function createPosts(){
     input.value = '';
 }
 
-// need to use E6 function  
+
+// delete function
+function deletePosts(e){
+    e.parentElement.parentElement.remove();
+  }
+
+/* // also can use E6 function-
+
 let deletePosts=(e)=>{
-  e.parentElement.parentElement.remove()
+  e.parentElement.parentElement.remove();
+} */
+
+
+// edit post option function
+
+function editPosts(e){
+    input.value = e.parentElement.previousElementSibling.innerHTML;
+    e.parentElement.parentElement.remove();
 }
