@@ -4,6 +4,7 @@ const msg = document.getElementById('msg');
 
 form.addEventListener('submit',function(e){
     e.preventDefault();
+    console.log('button click');
     formValidation()
 });
 
@@ -14,5 +15,15 @@ function formValidation(){
     }
     else{
         console.log('success');
+        acceptData()
     }
 }
+
+
+let data = {};
+
+function acceptData(){
+    data['text'] = input.value;
+    console.log(data);
+}
+
