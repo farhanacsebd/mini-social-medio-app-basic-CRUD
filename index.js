@@ -1,6 +1,8 @@
 const form = document.getElementById('form');
 const input = document.getElementById('input')
 const msg = document.getElementById('msg');
+const posts = document.getElementById('posts');
+
 
 form.addEventListener('submit',function(e){
     e.preventDefault();
@@ -27,3 +29,7 @@ function acceptData(){
     console.log(data);
 }
 
+
+function createPosts(){
+    
+}
